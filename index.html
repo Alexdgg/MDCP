@@ -94,12 +94,8 @@ Cookies:<br>
 	if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
 	if (window.navigator.userAgent.indexOf("Windows NT 6.3") != -1) OSName="Windows 8.1";
 	if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="Windows 8";
-	if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";
-	if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="Windows Vista";
-	if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="Windows XP";
-	if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="Windows 2000";
-	if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";
-	if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
+	if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="Windows 7";	
+	if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS";	
 	if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 	document.cookie = "operating-system="+OSName;
 	document.getElementById('soCookie').innerHTML=OSName;
@@ -111,24 +107,24 @@ Cookies:<br>
 	document.getElementById('timezoneCookie').innerHTML=timezone;
 	function setNameCookie(){
 		let element = document.getElementById('nameInput');
-		document.cookie = "numeStudent="+element.value;
+		document.cookie = "nume="+element.value;
 		let btn1 = document.getElementById('addNameBtn');
 		btn1.style="display:none";
-		document.getElementById('nameCookie').innerHTML=numeStudent;
+		document.getElementById('nameCookie').innerHTML=nume;
 	}
 	if(document.cookie){
-		const numeStudent = document.cookie
+		const nume = document.cookie
 		  .split('; ')
-		  .find(row => row.startsWith('numeStudent='))
+		  .find(row => row.startsWith('nume='))
 		  .split('=')[1];
 	 
-		if(numeStudent && numeStudent!=null && numeStudent!=undefined){
+		if(nume && nume!=null && nume!=undefined){			
 			let element = document.getElementById('nameInput');
 			let btn1 = document.getElementById('addNameBtn');
 			btn1.style="display:none";
 			
-			element.value= numeStudent;
-			document.getElementById('nameCookie').innerHTML=numeStudent;
+			element.value= nume;
+			document.getElementById('nameCookie').innerHTML=nume;
 		}
 	}
 </script>
