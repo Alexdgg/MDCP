@@ -22,9 +22,6 @@ body {
 </head>
 <body>
 <div class="container">
-<hr>
-STUDENT: Mindru Andrei
-<hr>
 <div class="row">
 	<div class="col-sm-3">  
 		<input id="nameInput" type="text" class="form-control " placeholder="Numele dvs. complet" aria-label="Recipient's username" aria-describedby="basic-addon2">
