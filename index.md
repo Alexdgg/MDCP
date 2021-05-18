@@ -34,7 +34,7 @@ body {
 Cookies:<br>
 1.Nume: <b><span id="nameCookie"></span></b><br>
 2.Browser: <b><span id="browserCookie"></span></b><br>
-3.Sistem de operare: <b><span id="soCookie"></span></b><br>
+3.Sistem de operare: <b><span id="opCookie"></span></b><br>
 4.Timezone: <b><span id="timezoneCookie"></span></b><br>
 <hr>
 <button class="btn btn-primary" onclick="alertCookie()">Show cookies</button><br>
@@ -101,7 +101,7 @@ Cookies:<br>
 	if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
 	if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 	document.cookie = "operating-system="+OSName;
-	document.getElementById('soCookie').innerHTML=OSName;
+	document.getElementById('opCookie').innerHTML=OSName;
 	let timezone = null;
 	timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 	if(timezone){
